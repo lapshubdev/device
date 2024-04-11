@@ -28,7 +28,8 @@ The Racetrack Hero software and hardware component come as is, without any warra
 To get started with Racetrack Hero on Raspberry Pi 4 and 0 W with GPS hat ensure to obtain following components:
 
 ## Headless Device
-<img width="620" height="480" src="https://github.com/racetrackhero/device/assets/7461901/f0694de3-5d04-4bbe-91a7-da1ce0b5a151"/>
+<img width="480" src="https://github.com/racetrackhero/device/assets/7461901/e86ad624-afa8-47d7-b406-87adb6317e0f"/>
+<img width="480" src="https://github.com/racetrackhero/device/assets/7461901/e9a98945-456f-40da-84e9-e45965a3d4df"/>
 
 ### Hardware Components
 1. Rasbperry Pi zero W 2. 
@@ -64,7 +65,7 @@ To get started with Racetrack Hero on Raspberry Pi 4 and 0 W with GPS hat ensure
 7. Pi Touchscreen 7inch.
    
 ## Touchscreen Device with smaller screen
-<img width="480" height="620" src="https://github.com/racetrackhero/device/assets/7461901/cd1f8169-47e7-4a7b-a62d-0be9ec05ec67"/>
+<img width="480" height="620" src="https://github.com/racetrackhero/device/assets/7461901/c7ee2db3-504c-4580-96e1-cf88111c5cfa"/>
 
 # Author
 - Racetrack Hero was created by Orcha Software, LLC
