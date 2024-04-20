@@ -1,0 +1,29 @@
+.spacer {
+  flex: 40 40 auto;
+}
+
+.statusText {
+	font-size: 11px;
+	padding: 0 4px;
+}
+
+.iconOnline {
+   display: block;
+   width: 15px;
+   height: 15px;
+   border-radius: 50%;
+   margin-top: 8px;
+   background:#76ff03;
+   box-shadow:0 0 20px #76ff03;
+   animation: grow 1.0s ease-in-out infinite;
+ }
+
+.iconOffline {
+   display: block;
+   width: 10px;
+   height: 10px;
+   border-radius: 50%;
+   margin-top: 8px;
+   background: #aec699;
+   box-shadow:0 0 20px #323430;
+ }

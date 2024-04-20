@@ -1,0 +1,71 @@
+<mat-grid-list cols="7" rowHeight="3:1">
+  <mat-grid-tile [colspan]="7" [rowspan]="1"></mat-grid-tile>
+  <mat-grid-tile [colspan]="1" [rowspan]="4"></mat-grid-tile>
+  <mat-grid-tile [colspan]="5" [rowspan]="8">
+    <mat-card>
+      <mat-tab-group mat-align-tabs="start" (selectedTabChange)="tabAction($event);">
+        <mat-tab label="Session Recording">
+          <br>
+          <mat-slider disabled="true" (change)="updateConfig()" [min]=1 [(ngModel)]="config.recording_speed_threshold"></mat-slider> Start recording at <b>{{ config.recording_speed_threshold }} mph</b>.
+			    <br>
+          <mat-slide-toggle disabled="true" (change)="updateConfig()" [(ngModel)]="config.first_lap_ignore">Ignore first lap</mat-slide-toggle>
+          <br>
+          <br>
+          <mat-slide-toggle (change)="updateConfig()" [(ngModel)]="config.silent_mode">Non-timed HPDE event, hide laptimes.</mat-slide-toggle>
+          <br>
+          <br>
+          <form *ngIf="!config.silent_mode">
+            <mat-form-field appearance="fill">
+              <mat-label>Display Mode</mat-label>
+              <mat-select [(ngModel)]="config.viewMode" name="view" (selectionChange)="updateConfig()" [(value)]="config.viewMode">
+                <mat-option *ngFor="let value of viewsList" [value]="value.mode">
+                  {{value.name}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </form>
+        </mat-tab>
+        <mat-tab label="OBD">
+          <br>
+			    <br>
+          <mat-slide-toggle (change)="updateConfig()" [(ngModel)]="config.obd_display">Display OBD Telemetry</mat-slide-toggle>
+          <br>
+          RPM: {{obdData.rpm}}
+          <br>
+          Speed: {{obdData.speed}}
+          <br>
+          Throttle Pos: {{obdData.throttle_pos}}
+          <br>
+        </mat-tab>
+        <!-- <mat-tab label="Cloud" ng-disabled=true>Settings</mat-tab> -->
+        <!--
+        <mat-tab label="Network">
+
+            <form>
+              <mat-form-field appearance="fill">
+                <mat-label>Select SSID</mat-label>
+                <mat-select [(ngModel)]="wifiSelected" name="ssid">
+                  <mat-option *ngFor="let network of wifiList" [value]="network.ssid">
+                    {{network.ssid}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+              <p> Selected wifi ssid: {{wifiSelected}} </p>
+            </form>
+  						<mat-form-field>
+    					<mat-label>Wifi passcode</mat-label>
+    						<input matInput [(ngModel)]="wifiPassphrase" placeholder="Enter the wifi password.">
+  						</mat-form-field>
+              <button mat-raised-button (click)="wifiConnect();">Connect</button>
+        </mat-tab> -->
+      </mat-tab-group>
+    </mat-card>
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="1" [rowspan]="4">v1.0</mat-grid-tile>
+</mat-grid-list>
+
+<div>
+	<button aria-label="Return to main menu." (click)="goBack();" class="settings-float">
+		<mat-icon>keyboard_arrow_left</mat-icon>
+	</button>
+</div>
