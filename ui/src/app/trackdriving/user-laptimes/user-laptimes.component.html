@@ -1,0 +1,11 @@
+<mat-list dense class="content" [style.height]='contentHeight'>
+  <mat-list-item *ngFor="let item of lapTimes; let i = index;">
+    <mat-list-item class="left">
+      <button style="background-color: #2aff2afa; border-radius: 5px; height: 22px; margin: 5px; margin-bottom: 8px;" *ngIf="i===0"> {{ i+1 }}</button><b><p *ngIf="i===0" style="color: #2aff2afa; font-size: 22px;"> {{ item.lap_time }}</p></b>
+        <button style="background-color: #f1ea06; border-radius: 5px; height: 22px; margin: 5px; margin-bottom: 8px;" *ngIf="i===1"> {{ i+1 }}</button><p *ngIf="i===1" style="color: #f1ea06; font-size: 22px; "> {{ item.lap_time }}</p>
+        <button style="background-color: #f17d06; border-radius: 5px; height: 22px; margin: 5px; margin-bottom: 8px;" *ngIf="i===2"> {{ i+1 }}</button><p *ngIf="i===2" style="color: #f17d06; font-size: 22px;"> {{ item.lap_time }}</p>
+        <button style="background-color: white; border-radius: 5px; height: 22px; margin: 5px; margin-bottom: 8px;" *ngIf="i>2"> {{ i+1 }}</button><p *ngIf="i>2" style="font-size: 16px"> {{ item.lap_time }}</p>
+      <mat-divider></mat-divider>
+    </mat-list-item>
+  </mat-list-item>
+</mat-list>

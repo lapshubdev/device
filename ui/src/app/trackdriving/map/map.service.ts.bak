@@ -1,0 +1,13 @@
+import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
+
+@Injectable()
+export class MapService {
+
+  constructor(private http: HttpClient) {}
+
+  getCords(): Observable<any> {
+    return this.http.get('assets/leaflet-countries/countries.geo.json');
+  }
+
+}

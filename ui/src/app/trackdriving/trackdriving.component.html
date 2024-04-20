@@ -1,0 +1,200 @@
+<br>
+<div *ngIf="!config.silent_mode">
+  <div *ngIf="blinkScreen" class="laptime">
+    <p style="color: white; font-size: 55px; font-family: system-ui; z-index: 501"> <b> {{ msgLastlaptime }} </b></p>
+  </div>
+  <div [class]="msgColor" *ngIf="blinkScreen">
+    <p style="color: white; font-size: 40px; font-family: system-ui; left: 50%; top: 65%; line-height: 1; position: absolute; transform: translate(-50%, -50%); z-index: 501"> <b> {{msg}} </b></p>
+  </div>
+</div>
+
+  <div>
+        <button aria-label="Return to main menu." (click)="goBack();" class="float">
+          <mat-icon>keyboard_arrow_left</mat-icon>
+        </button>
+        <button aria-label="Switch View" class="settings-float" [matMenuTriggerFor]="itemMenu">
+          <mat-icon>settings</mat-icon>
+        </button>
+ </div>
+    <mat-menu #itemMenu="matMenu" class="custom-background">
+      <button mat-menu-item style="color: white" (click)="switchView('default')">Default View</button>
+      <button mat-menu-item style="color: white" (click)="switchView('timetrials')"> Competitive View</button>
+     </mat-menu>
+<div *ngIf="!config.silent_mode">
+  <div *ngIf="currentView == 'timetrials'">
+    <div style="margin: 10px">
+      <div fxLayout="column" fxLayoutGap="10px">
+        <div fxLayout="row" fxLayoutGap="15px" fxFlexFill>
+          <div fxFlex="30">
+            <div fxLayout="column" fxLayoutGap="10px">
+              <div fxFlex="30">
+                <mat-card flexFill>
+                  <span style="color: white; font-size: 15px; font-weight: 600"> Other Drivers </span>
+                  <app-others-laptimes (onlineDriverEvent)="opponentEvent($event)"></app-others-laptimes>
+                </mat-card>
+              </div>
+              <div fxFlex="20" *ngIf="lapView">
+                <mat-card style="height: 110px">
+                  <span style="color: white; font-size: 15px; font-weight: 600"> Your Laptimes </span>
+                  <app-user-laptimes></app-user-laptimes>  
+                </mat-card>
+              </div>
+            </div>
+          </div>
+          <div fxFlex="70">
+            <div fxLayout="column" fxLayoutGap="10px">
+              <div fxFlex="40">
+                <mat-card style="background-color: #747a7547; box-shadow: 2px 2px 5px #747a75;">
+                  <span style="color: white; font-size: 15px; font-weight: 600 text-align: center; margin-left: 10px; font-weight: 600"> Laptime </span>
+                  <h1 class="title-white" style="font-size: 50px">{{ stopwatch.minutes || "00" }} : {{ stopwatch.seconds || "00" }} : {{ stopwatch.miliseconds || "000" }} </h1>
+                  <button mat-mini-fab color="white" style="bottom: 50px; left: 450px; position: absolute;">
+                    <h2> {{ currentLapNumber || 1 }} </h2>
+                  </button>
+                </mat-card>
+              </div>
+              <div fxFlex="10">
+                <mat-card style="box-shadow: 2px 2px 5px #22b53bcc; height: 60px">
+                  <span style="color: white; font-size: 15px; font-weight: 600;"> Best </span>
+                  <h1 class="title-green" style="font-size: 60px;">{{ bestLapTime.lap_time || "--:--:---"}}</h1>
+                  <button class="mat-tiny-fab-green" style="position: absolute; bottom: 50px; left: 450px;">
+                    <span style="font-size: 15px"> {{ bestLapTime.lap_number || 0 }} </span>
+                  </button>
+                </mat-card>
+              </div>
+            <div fxFlex="10">
+              <mat-card style="box-shadow: 2px 2px 5px #ff0000bf; height: 60px; background-color: {{opponentBestLaptime.color}}">
+                <span style="color: white; font-size: 15px; font-weight: 600"> Time to Beat </span>
+                 <h1 class="title-red" style="font-size: 40px; color: white">{{ opponentBestLaptime.laptime || "--:--:---"}}</h1>
+                 <span style="font-size: 25px; position: absolute; top: 50px; color: white"> {{opponentBestLaptime.driverName || "N/A" }} </span>
+               </mat-card>	
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="currentView == 'default'">
+    <div style="margin: 10px">
+      <div fxLayout="column" fxLayoutGap="10px">
+        <div fxLayout="row" fxLayoutGap="15px" fxFlexFill>
+          <div fxFlex="20">
+            <mat-card style="background-color: #22b53b47; box-shadow: 2px 2px 5px #22b53bcc;">
+              <span style="color: white; font-size: 15px; font-weight: 600;"> Best </span>
+              <h1 class="title-white" style="font-size: 25px">{{ bestLapTime.lap_time || "--:--:---"}}</h1>
+              <button class="mat-tiny-fab-green" style="position: absolute; bottom: 84px; left: 105px;">
+                <span style="font-size: 15px; margin-bottom: 5px"> {{ bestLapTime.lap_number || 0 }} </span>
+              </button>
+            </mat-card>
+          </div>
+          <div fxFlex="60">
+            <mat-card style="background-color: #747a7547; box-shadow: 2px 2px 5px #747a75;">
+              <span style="color: white; font-size: 15px; font-weight: 600 text-align: center; margin-left: 10px; font-weight: 600"> Laptime </span>
+              <h1 class="title-white" style="font-size: 50px">{{ stopwatch.minutes || "00" }} : {{ stopwatch.seconds || "00" }} : {{ stopwatch.miliseconds || "000" }} </h1>
+              <button mat-mini-fab color="white" style="bottom: 72px; left: 350px; position: absolute;">
+                <h2> {{ currentLapNumber || 1 }} </h2>
+              </button>
+            </mat-card>
+          </div>
+          <div fxFlex="20">
+            <mat-card  style="background-color: #589afd47; box-shadow: 2px 2px 5px #589afdbf;">
+              <span style="color: white; font-size: 15px; font-weight: 600"> Previous </span>
+              <h1 class="title-white" style="font-size: 25px">{{ previousLapTime.lap_time || "--:--:---"}}</h1>
+              <button class="mat-tiny-fab" style="position: absolute; bottom: 84px; left: 105px;">
+                <span style="font-size: 15px; margin-bottom: 5px"> {{ previousLapTime.lap_number || 0 }} </span>
+              </button>
+            </mat-card>
+          </div>
+        </div>
+        <div fxFlex="10"> </div>
+        <div fxFlex="10"> </div>
+        <div fxFlex="10"> </div>
+        <div fxFlex="30">
+          <div fxLayout="row" fxLayoutGap="15px" fxFlexFill>
+            <div fxFlex="30">
+              <div fxLayout="column" fxLayoutGap="15px" fxFlexFill>
+                <mat-card>
+                  <div>
+                    <span style="color: white; font-size: 15px; font-weight: 600"> GPS </span>
+                    <app-map></app-map>
+                  </div>
+                </mat-card>
+              </div>
+            </div>
+            <div fxFlex="30" *ngIf="lapView">
+              <mat-card style="height: 164px" flexFill>
+                <span style="color: white; font-size: 15px; font-weight: 600"> Your Laptimes </span>
+                <app-user-laptimes contentHeight="136px"></app-user-laptimes>  
+              </mat-card>
+            </div>
+            <div fxFlex="40" *ngIf="lapView">
+              <mat-card flexFill>
+                <span style="color: white; font-size: 15px; font-weight: 600"> Other Drivers </span>
+                <app-others-laptimes></app-others-laptimes>
+              </mat-card>
+            </div>
+            <div fxFlex="40" *ngIf="obdView">
+              <mat-card flexFill>
+                <span style="color: white; font-size: 15px; font-weight: 600"> Speed </span>
+                <h1 class="title-white"> {{ obdSpeed }} kph</h1>
+                <span style="color: white; font-size: 15px; font-weight: 600"> Rpm </span>
+                <h1 class="title-white" style="font-size: 30px"> {{ obdRpm }} rpm</h1>
+              </mat-card>
+            </div>
+            <div fxFlex="30" *ngIf="obdView">
+              <mat-card>
+                <span style="color: white; font-size: 15px; font-weight: 600"> Throttle </span>
+                <h1 class="title-white"> {{ obdThrottlePos }} %</h1>
+                <span style="color: white; font-size: 15px; font-weight: 600"> Brake </span>
+                <h1 class="title-white" style="font-size: 30px"> 0 %</h1>
+              </mat-card>
+            </div>
+         </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<div *ngIf="config.silent_mode">
+	<h1 class="title-white"> HPDE Mode on </h1> 
+  <h1 class="title-green"> Recording the session...</h1>
+	<div fxLayout="column" fxLayoutGap="10px">
+  	<div fxFlex="10"> </div>
+   	<div fxFlex="10"> </div>
+   	<div fxFlex="10"> </div>
+    <div fxFlex="33">
+    	<div fxLayout="row" fxLayoutGap="15px" fxFlexFill>
+				<div fxFlex="33"> </div>
+      	<div fxFlex="30">
+					<div fxLayout="column" fxLayoutGap="15px" fxFlexFill>
+						<mat-card>
+							<div>
+								<span style="color: white; font-size: 15px; font-weight: 600"> GPS </span>
+								<app-map></app-map>
+							</div>
+						</mat-card>
+					</div>
+      	</div>
+				<div fxFlex="30"> </div>
+				<!--
+        <div fxFlex="40" *ngIf="obdView">
+        	<mat-card flexFill>
+          	<span style="color: white; font-size: 15px; font-weight: 600"> Speed </span>
+            	<h1 class="title-white"> {{ obdSpeed }} kph</h1>
+              <span style="color: white; font-size: 15px; font-weight: 600"> Rpm </span>
+              <h1 class="title-white" style="font-size: 30px"> {{ obdRpm }} rpm</h1>
+        	</mat-card>
+     		</div>
+        <div fxFlex="30" *ngIf="obdView">
+					<mat-card>
+						<span style="color: white; font-size: 15px; font-weight: 600"> Throttle </span>
+						<h1 class="title-white"> {{ obdThrottlePos }} %</h1>
+						<span style="color: white; font-size: 15px; font-weight: 600"> Brake </span>
+						<h1 class="title-white" style="font-size: 30px"> 0 %</h1>
+					</mat-card>
+      	</div>
+				-->
+    	</div>
+ 		</div>
+</div>

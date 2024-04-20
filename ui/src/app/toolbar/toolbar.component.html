@@ -1,0 +1,26 @@
+<!-- <span class="material-icons">
+	signal_wifi_off
+</span>
+<span class="material-icons">
+gps_fixed
+</span>
+<span class="material-icons">
+cloud_off
+</span> -->
+<div fxLayout="row" fxLayoutAlign="start stretch" fxLayoutGap="15px">
+  <div fxFlex="20" flexFill>
+    <!-- <img src="atom://home/fd27845fce8446287de9506c4650c71/.bin/cloud-data/boot/bar-logo.png"> -->
+    <img src="./assets/bar-logo.png" />
+  </div>
+  <div fxFlex>
+    <div style="margin-top: 10px; margin-left: 135px; font-size: 22px">{{ barMessage }}</div>
+  </div>
+  <div fxFlex>
+    <div *ngIf="!online" class="iconOffline"></div>
+		<div *ngIf="online" class="iconOnline"></div> 
+	</div>
+	<!--<div fxFlex>
+    <div *ngIf="!online" class="statusText">Offline</div>
+    <div *ngIf="online" class="statusText">Online</div>
+  </div> -->
+</div>
