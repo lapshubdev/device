@@ -78,6 +78,6 @@ To get started with LapsHub on Raspberry Pi 4 and 0 W with GPS hat ensure to obt
 ### Author
 - LapsHub was created by Orcha Software, LLC
 - Author [wawura](https://github.com/wawura) 
-- Website [LapsHub](https://www.racetrackhero.com)
+- Website [LapsHub](https://www.lapshub.com)
 
 
