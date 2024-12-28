@@ -1,12 +1,12 @@
 **CONTRIBUTING.md**
 
-# Contributing to Racetrack Hero
+# Contributing to LapsHub
 
-Thank you for considering contributing to Racetrack Hero! We welcome contributions from the community to help improve and grow our project.
+Thank you for considering contributing to LapsHub! We welcome contributions from the community to help improve and grow our project.
 
 ## How to Contribute
 
-To contribute to Racetrack Hero, please follow these steps:
+To contribute to LapsHub, please follow these steps:
 
 1. Fork the repository to your GitHub account.
 2. Clone the forked repository to your local machine.
@@ -27,10 +27,10 @@ To contribute to Racetrack Hero, please follow these steps:
 
 ## Reporting Issues
 
-If you encounter any bugs, issues, or have suggestions for improvements, please open a GitHub issue in the Racetrack Hero repository. Provide as much detail as possible, including steps to reproduce the issue and any relevant information about your environment.
+If you encounter any bugs, issues, or have suggestions for improvements, please open a GitHub issue in the LapsHub repository. Provide as much detail as possible, including steps to reproduce the issue and any relevant information about your environment.
 
 ## Code of Conduct
 
 Please note that we have a Code of Conduct in place to ensure a positive and inclusive community environment. By participating in this project, you agree to abide by the terms outlined in the Code of Conduct.
 
-Thank you for your interest in contributing to Racetrack Hero! We appreciate your support and look forward to your contributions.
+Thank you for your interest in contributing to LapsHub! We appreciate your support and look forward to your contributions.

@@ -1,8 +1,8 @@
 **CODE_OF_CONDUCT.md**
 
-# Racetrack Hero Code of Conduct
+# LapsHub Code of Conduct
 
-As contributors and maintainers of the Racetrack Hero project, we pledge to respect all individuals who contribute to or interact with our community. We are committed to fostering an open and inclusive environment where everyone feels welcome and valued. To ensure a positive and productive experience for all, we have established the following guidelines:
+As contributors and maintainers of the LapsHub project, we pledge to respect all individuals who contribute to or interact with our community. We are committed to fostering an open and inclusive environment where everyone feels welcome and valued. To ensure a positive and productive experience for all, we have established the following guidelines:
 
 ## Expected Behavior
 
@@ -31,7 +31,7 @@ Violations of the Code of Conduct will be reviewed and addressed by the project 
 
 ## Acknowledgment
 
-By participating in the Racetrack Hero community, you agree to abide by the terms outlined in this Code of Conduct. We thank you for your cooperation in fostering a positive and respectful environment for all.
+By participating in the LapsHub community, you agree to abide by the terms outlined in this Code of Conduct. We thank you for your cooperation in fostering a positive and respectful environment for all.
 
 ---
 Please replace [team@racetrackhero.com] with appropriate contact information.
