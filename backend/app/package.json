@@ -1,0 +1,35 @@
+{
+  "name": "trackidol",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gps.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@serialport/bindings": "^9.0.0",
+    "@serialport/parser-byte-length": "^9.0.0",
+    "@serialport/parser-cctalk": "^9.0.0",
+    "@serialport/stream": "^9.0.0",
+    "async": "^3.1.1",
+    "aws-iot-device-sdk": "^2.2.3",
+    "compressing": "^1.5.0",
+    "fs-extra": "^9.0.0",
+    "geolib": "^3.3.1",
+    "gps": "^0.5.3",
+    "i2c-bus": "^5.2.3",
+    "jsonpack": "^1.1.5",
+    "node-gzip": "^1.1.2",
+    "node-wifi": "^2.0.13",
+    "rpi-gpio": "^2.1.7",
+    "serialport": "^9.0.0",
+    "sleep": "^6.2.0",
+    "socket.io": "^2.3.0",
+    "statman-stopwatch": "^2.11.1",
+    "underscore": "^1.10.2",
+    "wireless-tools": "^0.19.0",
+    "zlib": "^1.0.5"
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "_from": "serial-obd@latest",
+  "_id": "serial-obd@0.2.2",
+  "_inBundle": false,
+  "_integrity": "sha512-koQlvVBDtC8o3mzsrbZ4SmPegzy+tGoNAlR/0+sGvYnHyX3iFPVf0uwuO8gOWRUQCyEsyoK3yIpaNxKCD6mUew==",
+  "_location": "/serial-obd",
+  "_phantomChildren": {
+    "chownr": "1.1.4",
+    "commander": "2.20.3",
+    "debug": "3.2.6",
+    "detect-libc": "1.0.3",
+    "end-of-stream": "1.4.4",
+    "github-from-package": "0.0.0",
+    "minimist": "1.2.5",
+    "mkdirp": "0.5.5",
+    "nan": "2.14.1",
+    "node-abi": "2.18.0",
+    "noop-logger": "0.1.1",
+    "npmlog": "4.1.2",
+    "once": "1.4.0",
+    "os-homedir": "1.0.2",
+    "promirepl": "1.0.1",
+    "prompt-list": "3.2.0",
+    "rc": "1.2.8",
+    "safe-buffer": "5.1.2",
+    "simple-concat": "1.0.0",
+    "tar-stream": "1.6.2",
+    "tunnel-agent": "0.6.0",
+    "which-pm-runs": "1.0.0"
+  },
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "serial-obd@latest",
+    "name": "serial-obd",
+    "escapedName": "serial-obd",
+    "rawSpec": "latest",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/serial-obd/-/serial-obd-0.2.2.tgz",
+  "_shasum": "5ea8a80b979cace296517f5d7bddf7fd1717bd1f",
+  "_spec": "serial-obd@latest",
+  "_where": "/home/pi/app",
+  "author": {
+    "name": "Eric Smekens",
+    "email": "ericsmekens@msn.com",
+    "url": "http://github.com/EricSmekens"
+  },
+  "bugs": {
+    "url": "https://github.com/EricSmekens/node-serial-obd/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "serialport": "^6.0.0"
+  },
+  "deprecated": false,
+  "description": "Package for communicating with a serial/usb OBD-II reader.",
+  "devDependencies": {},
+  "directories": {
+    "lib": "./lib"
+  },
+  "engines": {
+    "node": ">= 0.10.x",
+    "npm": ">= 1.1.x"
+  },
+  "homepage": "https://github.com/EricSmekens/node-serial-obd#readme",
+  "keywords": [
+    "OBD",
+    "car",
+    "serial",
+    "ecu"
+  ],
+  "license": "Apache-2.0",
+  "main": "./lib/obd.js",
+  "name": "serial-obd",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/EricSmekens/node-serial-obd.git"
+  },
+  "scripts": {
+    "install": ""
+  },
+  "version": "0.2.2"
+}

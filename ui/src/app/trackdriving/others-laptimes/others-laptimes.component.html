@@ -1,0 +1,24 @@
+<br>
+<div class="blink" *ngIf="blink">
+  <p style="color: white; font-size: 50px; font-family: fantasy; margin-left: 225px; margin-top: 100px; z-index: 2"></p>
+</div>
+<mat-list dense class="content">
+  <mat-list-item *ngFor="let item of lapTimes; let i = index;">
+    <mat-list-item class="left" *ngIf="item.driverId == trackerId" style="background-color: #7c881e75; border-radius: 10px;">
+      <button style="background-color: #ff2a2afa; border-radius: 5px; height: 22px; margin: 5px; margin-bottom: 8px;" *ngIf="i===0"> {{ item.position }}</button><b *ngIf="i===0" style="color: white; font-size: 22px;">
+				{{ item.laptime }} <span style="color: white; font-size: 20px" *ngIf="item.driverId == trackerId"> - YOU </span> </b>
+        <button style="background-color: #f1ea06; border-radius: 5px; height: 22px; margin: 5px; margin-bottom: 8px;" *ngIf="i===1"> {{ item.position }}</button><p *ngIf="i===1" style="color: white; font-size: 22px;"> {{ item.laptime }} <span style="color: white; font-size: 20px" *ngIf="item.driverId == trackerId"> - YOU </span> </p>
+        <button style="background-color: #f17d06; border-radius: 5px; height: 22px; margin: 5px; margin-bottom: 8px;" *ngIf="i===2"> {{ item.position }}</button><p *ngIf="i===2" style="color: white; font-size: 22px;"> {{ item.laptime }} <span style="color: white; font-size: 20px" *ngIf="item.driverId == trackerId"> - YOU </span>  </p>
+        <button style="background-color: #white; border-radius: 5px; height: 22px; margin: 5px; margin-bottom: 8px;" *ngIf="i>2"> {{ item.position }}</button><p *ngIf="i>2" style="font-size: 16px;"> {{ item.laptime }} <span style="color: white; font-size: 20px" *ngIf="item.driverId == trackerId"> - YOU </span>  </p> 
+      <mat-divider></mat-divider>
+    </mat-list-item>
+    <mat-list-item class="left" *ngIf="item.driverId !== trackerId">
+      <button style="background-color: #ff2a2afa; border-radius: 5px; height: 22px; margin: 5px; margin-bottom: 8px;" *ngIf="i===0"> {{ item.position }}</button><b *ngIf="i===0" style="color: white; font-size: 22px;">
+				{{ item.laptime }} <span style="color: white; font-size: 20px" *ngIf="item.driverId !== trackerId"> - {{item.name}} </span> </b>
+        <button style="background-color: #f1ea06; border-radius: 5px; height: 22px; margin: 5px; margin-bottom: 8px;" *ngIf="i===1"> {{ item.position }}</button><p *ngIf="i===1" style="color: white; font-size: 22px;"> {{ item.laptime }} <span style="color: white; font-size: 20px" *ngIf="item.driverId !== trackerId"> - {{item.name}} </span> </p>
+        <button style="background-color: #f17d06; border-radius: 5px; height: 22px; margin: 5px; margin-bottom: 8px;" *ngIf="i===2"> {{ item.position }}</button><p *ngIf="i===2" style="color: white; font-size: 22px;"> {{ item.laptime }} <span style="color: white; font-size: 20px" *ngIf="item.driverId !== trackerId"> - {{item.name}} </span> </p>
+        <button style="background-color: #white; border-radius: 5px; height: 22px; margin: 5px; margin-bottom: 8px;" *ngIf="i>2"> {{ item.position }}</button><p *ngIf="i>2" style="font-size: 16px;"> {{ item.laptime }}<span style="color: white; font-size: 16px" *ngIf="item.driverId !== trackerId"> - {{item.name}} </span> </p> 
+      <mat-divider></mat-divider>
+    </mat-list-item>
+  </mat-list-item>
+</mat-list>

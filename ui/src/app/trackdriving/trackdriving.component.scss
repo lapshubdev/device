@@ -1,0 +1,215 @@
+.laptime {
+  //height: 70%;
+  //width: 97%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.blink_me_green {
+  height: 70%;
+  width: 97%;
+  position: absolute;
+  background-color: #000000e3;
+  z-index: 1;
+  animation: blinkergreen 1s linear infinite;
+}
+
+@keyframes blinkergreen {
+  50% {
+    opacity: 1;
+		background-color: rgb(117,209,63);
+  }
+}
+
+.blink_me_red {
+  height: 70%;
+  width: 97%;
+  position: absolute;
+  background-color: #000000e3;
+  z-index: 1;
+  animation: blinkerred 1s linear infinite;
+}
+
+@keyframes blinkerred {
+  50% {
+    opacity: 1;
+		background-color: red;
+  }
+}
+
+.blink_me_regular {
+  height: 70%;
+  width: 97%;
+  position: absolute;
+  background-color: #000000e3;
+  z-index: 1;
+  animation: blinkerregular 1s linear infinite;
+}
+
+@keyframes blinkerregular {
+  50% {
+    opacity: 1;
+		background-color: gray;
+  }
+}
+
+.float{
+	position:fixed;
+	top: -20px;
+  right: 40px;
+	background-color:#fff0;
+	border-radius: 100%;
+	text-align: center;
+	margin-top: 35px;
+  height: 50px;
+  width: 50px;
+	color: white;
+}
+
+.settings-float {
+	position: fixed;
+	//width:60px;
+	//height:60px;
+	top: -20px;
+  right: 110px;
+	//color:#FFF;
+	border-radius: 100%;
+	text-align: center;
+	background-color:#fff0;
+	/* box-shadow: 2px 2px 3px #ffc7c7; */
+	margin-top: 35px;
+  height: 50px;
+  width: 50px;
+	color: white;
+}
+
+::ng-deep .custom-background {
+	background-color: #000000!important;
+	color: white!important;
+ }
+
+.back-button {
+  display: fixed;
+  justify-content: space-between;
+  width: 480px;
+	margin-top:22px;
+}
+
+.title-white {
+  color: white;
+  text-align: center;
+  font-size: 50px;
+  margin-top: 15px;
+	text-shadow: 2px 2px #9d9100fa;
+}
+
+.title-green {
+  color: #2aff2afa;
+  text-align: center;
+  font-size: 60px;
+  margin-top: 0px;
+	text-shadow: 2px 2px #9d9100fa;
+}
+
+.title-blue {
+  color: #00a1fffa;
+  text-align: center;
+  font-size: 40px;
+  margin-top: 0px;
+	text-shadow: 2px 2px #9d9100fa;
+}
+
+.title-red {
+  //color: red;
+  text-align: center;
+  font-size: 50px;
+  margin-top: 0px;
+	//text-shadow: 2px 2px #cf0202c2;
+}
+
+.mat-card {
+  background-color: #747a7547;
+  border-radius: 15px;
+	border-color: #787474;
+  border-width: thin;
+	border-style: solid;
+  //box-shadow: 2px 2px 5px #747a75;
+}
+
+.mat-card-op {
+  //background-color: #747a7547;
+  border-radius: 15px;
+	border-color: #787474;
+  border-width: thin;
+	border-style: solid;
+  //box-shadow: 2px 2px 5px #747a75;
+}
+
+.mat-tiny-fab-green {
+    box-sizing: border-box;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+    display: inline-block;
+    white-space: nowrap;
+    text-decoration: none;
+    vertical-align: baseline;
+    text-align: center;
+    margin: 0;
+    min-width: 64px;
+    line-height: 28px;
+    padding: 0 16px;
+    border-radius: 4px;
+    overflow: visible;
+		background-color: #2aff2afa;
+    transform: translate3d(0, 0, 0);
+    transition: background 400ms cubic-bezier(0.25, 0.8, 0.25, 1),box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+    min-width: 0;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    padding: 0;
+    flex-shrink: 0;
+}
+
+.mat-tiny-fab {
+    box-sizing: border-box;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+    display: inline-block;
+    white-space: nowrap;
+    text-decoration: none;
+    vertical-align: baseline;
+    text-align: center;
+    margin: 0;
+    min-width: 64px;
+    line-height: 28px;
+    padding: 0 16px;
+    border-radius: 4px;
+    overflow: visible;
+		background-color: #00a1fffa;
+    transform: translate3d(0, 0, 0);
+    transition: background 400ms cubic-bezier(0.25, 0.8, 0.25, 1),box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+    min-width: 0;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    padding: 0;
+    flex-shrink: 0;
+}

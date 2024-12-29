@@ -1,0 +1,183 @@
+@import '~@angular/material/theming';
+@include mat-core();
+@import '~leaflet/dist/leaflet.css';
+@import '~@ansur/leaflet-pulse-icon/dist/L.Icon.Pulse.css';
+
+$my-app-primary: mat-palette($mat-red);
+$my-app-accent:  mat-palette($mat-red, 500, 900, A100);
+$my-app-warn:    mat-palette($mat-deep-orange);
+
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+@include angular-material-theme($my-app-theme);
+
+html {
+	background: linear-gradient(182deg, rgb(0 0 0 / 73%), #000000), url('./assets/carbon.png');
+	background-size: cover;
+} 
+
+.mat-drawer-container {
+	//background: url('./assets/carbon.png');
+  //background:linear-gradient(0deg, rgba(255, 0, 150, 0.3), rgba(255, 0, 150, 0.3)), url('./assets/carbon.png');
+  //background: linear-gradient(182deg, rgb(0 0 0 / 38%), rgb(34 0 0)), url('./assets/carbon.png');
+	background: linear-gradient(182deg, rgb(0 0 0 / 73%), #000000), url('./assets/carbon.png');
+	background-size: cover;
+	//color: rgb(255, 255, 255);
+  //box-shadow: 2px 2px 5px #7e7b7b;
+	border-radius: 5px;
+}
+
+.mat-toolbar {
+	background: url('./assets/carbon.png');
+	background-size: cover;
+	color: rgb(255, 255, 255);
+  box-shadow: 2px 2px 5px #7e7b7b80;
+	border-radius: 5px;
+}
+
+.mat-flat-button.mat-accent, .mat-raised-button.mat-accent, .mat-fab.mat-accent, .mat-mini-fab.mat-accent {
+    background-color: #c80000;
+}
+
+.mat-grid-tile .mat-figure {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+element.style {
+    transform: translateX(0%);
+}
+
+/* slider theming, global */
+.mat-slider {
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    padding: 8px;
+    outline: none;
+    vertical-align: middle;
+    width: 300px;
+}
+
+.mat-slider-horizontal .mat-slider-ticks-container {
+    height: 2px;
+    width: 100%;
+}
+
+//.mat-slider-ticks-container {
+//    position: absolute;
+//    left: 0;
+//    top: 0;
+//    /* overflow: hidden; */
+    /* color: red; */
+//    background-color: red;
+//}
+
+.mat-slide-toggle-bar {
+  background-color: #7b3c3c;
+}
+
+.mat-tab-label {
+    height: 48px;
+    width: 50px; 
+    padding: 0 24px;
+    cursor: pointer;
+    box-sizing: border-box;
+    opacity: .6;
+    min-width: 160px;
+    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    position: relative;
+    color: white;
+}
+
+.mat-form-field .mat-select-arrow {
+  color: #f44336;
+}
+
+.mat-select-content{
+    width:2000px;
+    background-color: red;
+    font-size: 10px;   
+}
+
+.mat-select-value {
+    color: rgb(255 255 255 / 87%);
+}
+
+.mat-select-panel {
+  background: #34393ead;
+}
+
+.mat-option {
+    color: rgb(255 255 255 / 87%);
+}
+
+.mat-form-field-label{
+  color: #825555 !important;
+}
+
+.mat-form-field-underline{
+  background-color: #825555 !important;
+}
+
+.alternate-theme {
+  $alternate-primary: mat-palette($mat-light-blue);
+  $alternate-accent:  mat-palette($mat-yellow, 400);
+  $alternate-theme: mat-light-theme($alternate-primary, $alternate-accent);
+  @include angular-material-theme($alternate-theme);
+}
+
+.mat-rh-feed-sm-fab {
+	box-sizing: border-box;
+	/*position: relative;*/
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	cursor: pointer;
+	outline: none;
+	border: none;
+	-webkit-tap-highlight-color: transparent;
+	display: inline-block;
+	white-space: nowrap;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-align: center;
+	margin: 1px;
+	min-width: 64px;
+	/* line-height: 1px; */
+	padding: 0 16px;
+	border-radius: 4px;
+	overflow: visible;
+	color: black;
+	transform: translate3d(0, 0, 0);
+	transition: background 400ms cubic-bezier(0.25, 0.8, 0.25, 1),box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+	min-width: 0;
+	border-radius: 50%;
+	width: 15px;
+	height: 15px;
+	padding: 0;
+	flex-shrink: 0;
+}
+
+.mat-dialog-container {
+	box-shadow: 0px 11px 15px -7px rgb(0 0 0 / 20%), 0px 24px 38px 3px rgb(108 108 108 / 0%), 0px 9px 46px 8px rgb(142 17 17 / 31%);
+	color: rgb(255 255 255);
+	background-color: #00000096;
+	border-color: #ffffff38;
+	border-style: solid;
+	border-width: thin;
+}

@@ -1,0 +1,50 @@
+body {
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:18px;
+	background-color:#CCC;
+}
+
+.settings-float {
+	position:fixed;
+	top: -20px;
+  right: 40px;
+	background-color:#fff0;
+	border-radius: 100%;
+	text-align: center;
+	margin-top: 35px;
+  height: 50px;
+  width: 50px;
+	color: white;
+}
+
+.mat-card {
+	 background: #060606;
+	 color: rgba(255, 255, 255, 0.87);
+   box-shadow: 2px 2px 9px #adadadb0;
+	 border-radius: 15px;
+	 height: 280px;
+	 width: 530px;
+ }
+
+.title-white {
+ color: white;
+ text-align: center;
+ font-size: 30px;
+ margin-top: 45px;
+}
+
+.mat-select-content{
+	background-color: red;
+	font-size: 10px;   
+}
+
+:host ::ng-deep .mat-tab-body-content {
+    height: 225px;
+    overflow: auto;
+    overflow-y: hidden;
+}
+
+.mat-option.mat-active {
+	background: rgba(0, 0, 0, 0.04);
+	color: rgb(235 10 10);
+}
