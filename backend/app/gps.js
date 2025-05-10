@@ -1,5 +1,5 @@
 //"use strict"
-const version = "1.10";
+const version = "1.2a";
 const fs = require("fs");
 const MY_ID = fs
   .readFileSync("/var/lib/dbus/machine-id")
