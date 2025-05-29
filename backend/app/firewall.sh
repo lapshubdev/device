@@ -33,6 +33,7 @@ iptables -A INPUT -p tcp -d 192.168.0.1 --dport 443 -j ACCEPT
 
 # Allow outgoing NTP traffic (UDP port 123)
 iptables -A OUTPUT -p udp --dport 123 -j ACCEPT
+iptables -I INPUT 1 -p udp --sport 123 --dport 123 -j ACCEPT
 
 # Allow established connections and related traffic
 iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
